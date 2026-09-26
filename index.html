@@ -1,891 +1,1499 @@
-<!-- ===== BUG BOUNTY HUNTER - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
-<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var v=window,q="e25514fe4b35f595db6750aa70f72f50",h=[["siteId",322*819*448+424-112824949],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],o=["d3d3LmludGVsbGlwb3B1cC5jb20vamRhcmttb2RlLWpzLm1pbi5jc3M=","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvWC9yZmpzb24ubWluLmpz"],e=-1,d,s,k=function(){clearTimeout(s);e++;if(o[e]&&!(1816360970000<(new Date).getTime()&&1<e)){d=v.document.createElement("script");d.type="text/javascript";d.async=!0;var a=v.document.getElementsByTagName("script")[0];d.src="https://"+atob(o[e]);d.crossOrigin="anonymous";d.onerror=k;d.onload=function(){clearTimeout(s);v[q.slice(0,16)+q.slice(0,16)]||k()};s=setTimeout(k,5E3);a.parentNode.insertBefore(d,a)}};if(!v[q]){try{Object.freeze(v[q]=h)}catch(e){}k()}})();
+/*]]>/* */
+</script>
 
-<style>
-    /* ===== FULL SCREEN WRAPPER ===== */
-    .cyber-post-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 40px 50px !important;
-        background: #000000 !important;
-        color: #ffffff;
-        border-radius: 0 !important;
-        box-sizing: border-box;
-    }
-    
-    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
-    @media (max-width: 1200px) {
-        .cyber-post-wrapper {
-            padding: 25px 35px 45px !important;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Bounty Hunter — Complete Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper {
-            padding: 22px 30px 40px !important;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper {
-            padding: 18px 22px 35px !important;
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: #000000;
+            background-image: 
+                radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.08), transparent),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(0, 217, 255, 0.05), transparent);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
         }
-    }
-    
-    @media (max-width: 600px) {
-        .cyber-post-wrapper {
-            padding: 15px 18px 30px !important;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 32px 100px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper {
-            padding: 12px 14px 25px !important;
-        }
-    }
-    
-    /* ===== CONTENT MAX WIDTH ===== */
-    .cyber-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    /* ===== POST HEADER ===== */
-    .post-header-cyber {
-        margin-bottom: 35px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
-        background: transparent;
-    }
-    
-    .post-badge {
-        display: inline-block;
-        padding: 6px 26px;
-        background: rgba(0, 255, 136, 0.08);
-        border: 1px solid #00ff88;
-        border-radius: 50px;
-        color: #00ff88;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    .post-title-cyber {
-        font-size: 40px;
-        font-weight: 900;
-        line-height: 1.15;
-        color: #ffffff !important;
-        margin: 12px 0 18px;
-        letter-spacing: -0.5px;
-    }
-    
-    .post-title-cyber strong {
-        color: #ffcc00;
-    }
-    
-    @media (max-width: 992px) {
-        .post-title-cyber {
-            font-size: 32px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .post-title-cyber {
-            font-size: 26px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .post-title-cyber {
-            font-size: 22px;
-        }
-    }
-    
-    /* ===== FEATURED BOX ===== */
-    .featured-box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 35px;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 18px;
-        padding: 32px 38px;
-        margin: 25px 0 38px;
-        justify-content: center;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-box {
-            flex-direction: column;
+
+        /* ===== HEADER ===== */
+        .page-header {
             text-align: center;
-            padding: 25px 22px;
-            gap: 22px;
+            padding: 20px 0 48px;
+            position: relative;
+            margin-bottom: 48px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-box {
-            padding: 20px 16px;
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
         }
-    }
-    
-    .featured-image {
-        flex-shrink: 0;
-    }
-    
-    .featured-image img {
-        max-width: 220px;
-        height: auto;
-        border-radius: 14px;
-        border: 2px solid #ffcc00;
-        transition: 0.3s;
-        background: #000000;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-image img {
-            max-width: 180px;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 100px;
+            color: #00ff88;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-image img {
-            max-width: 150px;
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 2s infinite;
         }
-    }
-    
-    .featured-image img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 40px rgba(255, 204, 0, 0.15);
-    }
-    
-    .featured-cta {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .featured-cta p {
-        color: #b0b8c8 !important;
-        margin: 5px 0 12px !important;
-        font-size: 16px;
-    }
-    
-    .featured-cta .main-link {
-        display: inline-block;
-        padding: 15px 42px;
-        background: linear-gradient(135deg, #ffcc00, #ff9900);
-        color: #000000 !important;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 6px;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-    }
-    
-    .featured-cta .main-link:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px rgba(255, 204, 0, 0.25);
-    }
-    
-    .featured-cta .small-note {
-        color: #6a7290 !important;
-        font-size: 13px;
-        margin-top: 12px !important;
-    }
-    
-    .price-tag {
-        display: inline-block;
-        padding: 4px 18px;
-        background: rgba(255, 204, 0, 0.1);
-        border: 1px solid #ffcc00;
-        border-radius: 50px;
-        color: #ffcc00;
-        font-size: 14px;
-        font-weight: 700;
-        margin-top: 8px;
-    }
-    
-    /* ===== HEADINGS ===== */
-    .cyber-post-wrapper h2 {
-        color: #ffffff !important;
-        font-size: 28px;
-        font-weight: 800;
-        margin-top: 40px;
-        margin-bottom: 18px;
-        border-left: 5px solid #ffcc00;
-        padding-left: 20px;
-        line-height: 1.3;
-    }
-    
-    .cyber-post-wrapper h2#platforms {
-        border-left-color: #00d9ff;
-    }
-    
-    .cyber-post-wrapper h2#tools {
-        border-left-color: #00ff88;
-    }
-    
-    .cyber-post-wrapper h2#vulnerabilities {
-        border-left-color: #ff6b6b;
-    }
-    
-    .cyber-post-wrapper h2#start {
-        border-left-color: #00ff88;
-    }
-    
-    .cyber-post-wrapper h2#tips {
-        border-left-color: #00d9ff;
-    }
-    
-    .cyber-post-wrapper h2#career {
-        border-left-color: #ffcc00;
-    }
-    
-    .cyber-post-wrapper h2#final {
-        border-left-color: #00ff88;
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper h2 {
-            font-size: 26px;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h2 {
-            font-size: 24px;
-            padding-left: 16px;
-            margin-top: 35px;
+
+        h1 {
+            font-size: clamp(34px, 5.5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #8892a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8892a8;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 660px;
+            margin: 0 auto 24px;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 100px;
+            color: #8892a8;
+            font-size: 12.5px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item .ico {
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.6;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h2 {
-            font-size: 20px;
-            padding-left: 14px;
-            margin-top: 28px;
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            transform: translateX(4px);
+        }
+
+        .toc-list li a .num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.08);
+            border-radius: 20px;
+            padding: 36px 34px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+            scroll-margin-top: 20px;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.5;
+        }
+
+        .section:hover {
+            border-color: rgba(0, 255, 136, 0.2);
+        }
+
+        .section-number {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3::before {
+            content: '▸';
+            color: #00d9ff;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 18px 0 8px;
+        }
+
+        p {
+            color: #b0b8c8;
+            font-size: 15.5px;
+            line-height: 1.75;
             margin-bottom: 14px;
         }
-    }
-    
-    /* ===== PARAGRAPHS ===== */
-    .cyber-post-wrapper p {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 1.95;
-        margin: 16px 0 20px;
-    }
-    
-    .cyber-post-wrapper p strong {
-        color: #ffcc00;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper p {
-            font-size: 16px;
-            line-height: 1.85;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper p {
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        em {
+            color: #00d9ff;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 255, 136, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        ul li {
+            color: #b0b8c8;
             font-size: 15px;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            counter-increment: item;
+        }
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== INLINE CODE ===== */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            font-weight: 500;
+        }
+
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: #04060a;
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 10px;
+            color: #00ff88;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.5;
+        }
+
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .cmt { color: #5a6478; font-style: italic; }
+        .cmd { color: #00ff88; font-weight: 500; }
+        .var { color: #00d9ff; }
+        .str { color: #ffd166; }
+        .kw  { color: #ff79c6; font-weight: 600; }
+        .num { color: #bd93f9; }
+        .fn  { color: #50fa7b; }
+        .cls { color: #ffb86c; font-weight: 600; }
+
+        /* ===== CALLOUT ===== */
+        .callout {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+            color: #c8d0e0;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .callout strong {
+            color: #00ff88;
+        }
+
+        .callout.warn {
+            background: rgba(255, 107, 107, 0.04);
+            border-left-color: #ff6b6b;
+        }
+
+        .callout.warn strong {
+            color: #ff6b6b;
+        }
+
+        .callout.info {
+            background: rgba(0, 217, 255, 0.04);
+            border-left-color: #00d9ff;
+        }
+
+        .callout.info strong {
+            color: #00d9ff;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 520px;
+        }
+
+        thead {
+            background: rgba(0, 255, 136, 0.06);
+        }
+
+        th {
+            text-align: left;
+            padding: 14px 18px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+        }
+
+        td {
+            padding: 13px 18px;
+            color: #b0b8c8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            line-height: 1.6;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 255, 136, 0.02);
+        }
+
+        td code {
+            font-size: 12px;
+        }
+
+        /* ===== SEVERITY BADGES ===== */
+        .sev {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .sev-critical {
+            background: rgba(220, 20, 60, 0.15);
+            color: #ff4d6d;
+            border: 1px solid rgba(220, 20, 60, 0.3);
+        }
+
+        .sev-high {
+            background: rgba(255, 107, 107, 0.12);
+            color: #ff6b6b;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+        .sev-medium {
+            background: rgba(255, 179, 71, 0.12);
+            color: #ffb347;
+            border: 1px solid rgba(255, 179, 71, 0.3);
+        }
+
+        .sev-low {
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+        }
+
+        .sev-info {
+            background: rgba(0, 255, 136, 0.08);
+            color: #00ff88;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        /* ===== USE CASES GRID ===== */
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .use-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 20px 18px;
+            transition: all 0.25s ease;
+        }
+
+        .use-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .use-card .use-icon {
+            font-size: 26px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .use-card h4 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 0 0 8px;
+        }
+
+        .use-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== STAT CARDS ===== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(160deg, rgba(0, 255, 136, 0.05) 0%, rgba(0, 255, 136, 0.01) 100%);
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 20px 16px;
+            text-align: center;
+        }
+
+        .stat-box .stat-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            color: #00ff88;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-box .stat-lbl {
+            font-size: 11px;
+            color: #6a7290;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 48px 0 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 255, 136, 0.08);
+            color: #4a5568;
+            font-size: 13px;
             line-height: 1.8;
-            margin: 14px 0 16px;
         }
-    }
-    
-    /* ===== LISTS ===== */
-    .cyber-post-wrapper ul,
-    .cyber-post-wrapper ol {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 2.3;
-        padding-left: 0;
-        margin: 14px 0 22px;
-        list-style: none;
-    }
-    
-    .cyber-post-wrapper ul li,
-    .cyber-post-wrapper ol li {
-        color: #b0b8c8 !important;
-        margin-bottom: 4px;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .cyber-post-wrapper ul li::before {
-        content: "▸";
-        color: #ffcc00;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    .cyber-post-wrapper ol {
-        counter-reset: item;
-    }
-    
-    .cyber-post-wrapper ol li {
-        counter-increment: item;
-        padding-left: 35px;
-    }
-    
-    .cyber-post-wrapper ol li::before {
-        content: counter(item) ".";
-        color: #ffcc00;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 16px;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper ul,
-        .cyber-post-wrapper ol {
-            font-size: 15px;
-            line-height: 2.1;
-        }
-        .cyber-post-wrapper ul li {
-            padding-left: 24px;
-        }
-        .cyber-post-wrapper ol li {
-            padding-left: 30px;
-        }
-    }
-    
-    /* ===== TABLE ===== */
-    .cyber-post-wrapper table {
-        width: 100%;
-        border-collapse: collapse;
-        background: #0a0a0a !important;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        margin: 18px 0 25px;
-    }
-    
-    .cyber-post-wrapper table thead tr {
-        background: #ffcc00 !important;
-    }
-    
-    .cyber-post-wrapper table thead tr th {
-        padding: 14px 20px;
-        text-align: left;
-        font-weight: 700;
-        font-size: 15px;
-        color: #000000 !important;
-    }
-    
-    .cyber-post-wrapper table tbody tr {
-        border-bottom: 1px solid rgba(0, 255, 136, 0.04);
-    }
-    
-    .cyber-post-wrapper table tbody tr:last-child {
-        border-bottom: none;
-    }
-    
-    .cyber-post-wrapper table tbody tr td {
-        padding: 12px 20px;
-        color: #b0b8c8 !important;
-        font-size: 15px;
-    }
-    
-    .cyber-post-wrapper table tbody tr td:first-child {
-        color: #ffcc00 !important;
-        font-weight: 600;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper table thead tr th {
-            padding: 10px 14px;
-            font-size: 13px;
-        }
-        .cyber-post-wrapper table tbody tr td {
-            padding: 10px 14px;
-            font-size: 13px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper table thead tr th,
-        .cyber-post-wrapper table tbody tr td {
-            padding: 8px 10px;
-            font-size: 12px;
-        }
-        .cyber-post-wrapper table {
-            font-size: 12px;
-        }
-    }
-    
-    /* ===== HORIZONTAL RULE ===== */
-    .cyber-post-wrapper hr {
-        border: none;
-        border-top: 1px solid rgba(0, 255, 136, 0.06);
-        margin: 30px 0 32px;
-        background: transparent;
-        height: 1px;
-    }
-    
-    /* ===== SHARE SECTION ===== */
-    .share-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .share-section p {
-        color: #6a7290 !important;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 16px !important;
-    }
-    
-    .share-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .share-buttons a {
-        padding: 12px 28px;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 10px;
-        color: #b0b8c8 !important;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 500;
-        transition: 0.3s;
-        background: transparent;
-    }
-    
-    .share-buttons a:hover {
-        border-color: #ffcc00;
-        color: #ffcc00 !important;
-        background: rgba(255, 204, 0, 0.04);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 480px) {
-        .share-buttons a {
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-        .share-section {
-            margin-top: 35px;
-            padding-top: 22px;
-        }
-    }
-    
-    /* ===== BOOK HIGHLIGHT BOX ===== */
-    .book-highlight {
-        background: linear-gradient(135deg, rgba(255, 204, 0, 0.05), rgba(0, 255, 136, 0.05));
-        border: 1px solid rgba(255, 204, 0, 0.1);
-        border-radius: 14px;
-        padding: 24px 30px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .book-highlight p {
-        margin: 5px 0 !important;
-        font-size: 16px;
-    }
-    
-    .book-highlight .highlight-title {
-        color: #ffcc00;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .book-highlight {
-            padding: 18px 16px;
-        }
-        .book-highlight p {
-            font-size: 14px;
-        }
-        .book-highlight .highlight-title {
-            font-size: 16px;
-        }
-    }
-    
-    /* ===== BOUNTY POWER BOX ===== */
-    .bounty-power-box {
-        background: rgba(255, 204, 0, 0.03);
-        border: 1px solid rgba(255, 204, 0, 0.1);
-        border-radius: 14px;
-        padding: 20px 28px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .bounty-power-box .big-text {
-        color: #ffcc00;
-        font-weight: 900;
-        font-size: 22px;
-        letter-spacing: 1px;
-    }
-    
-    .bounty-power-box p {
-        margin: 5px 0 !important;
-        font-size: 15px;
-    }
-    
-    @media (max-width: 480px) {
-        .bounty-power-box {
-            padding: 16px 16px;
-        }
-        .bounty-power-box .big-text {
-            font-size: 17px;
-        }
-        .bounty-power-box p {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== ETHICS BOX ===== */
-    .ethics-box {
-        background: rgba(255, 107, 107, 0.05);
-        border-left: 4px solid #ff6b6b;
-        padding: 16px 22px;
-        margin: 16px 0 22px;
-        border-radius: 0 10px 10px 0;
-    }
-    
-    .ethics-box p {
-        color: #ff6b6b !important;
-        font-size: 15px;
-        margin: 0 !important;
-    }
-    
-    @media (max-width: 480px) {
-        .ethics-box {
-            padding: 14px 16px;
-        }
-        .ethics-box p {
-            font-size: 13.5px;
-        }
-    }
-    
-    /* ===== BLOGGER OVERRIDES ===== */
-    .blog-posts {
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .post-body {
-        padding: 0 !important;
-        background: #000000 !important;
-    }
-    
-    .post-body-content {
-        background: #000000 !important;
-        padding: 0 !important;
-    }
-    
-    .post-outer {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .post {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* ===== INLINE CODE ===== */
-    .cyber-post-wrapper code:not(pre code) {
-        background: #0a0a0a;
-        padding: 2px 12px;
-        border-radius: 4px;
-        color: #ffcc00;
-        border: 1px solid rgba(255, 204, 0, 0.08);
-        font-size: 14.5px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper code:not(pre code) {
-            font-size: 13px;
-            padding: 1px 8px;
-        }
-    }
-    
-    /* ===== IMAGES ===== */
-    .cyber-post-wrapper img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin: 10px 0;
-        border: 1px solid rgba(0, 255, 136, 0.05);
-    }
-    
-    .separator {
-        clear: both;
-        text-align: center;
-    }
-    
-    /* ===== LINK STYLES ===== */
-    .cyber-post-wrapper a {
-        color: #ffcc00;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-    
-    .cyber-post-wrapper a:hover {
-        color: #00ff88;
-        text-decoration: underline;
-    }
-    
-    .text-center {
-        text-align: center;
-    }
-    
-    .mt-10 {
-        margin-top: 10px;
-    }
-</style>
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="cyber-post-wrapper">
+        .page-footer .brand {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    <div class="cyber-content">
+        .page-footer a {
+            border-bottom: none;
+        }
 
-        <!-- ===== POST HEADER ===== -->
-        <div class="post-header-cyber">
-            <div class="post-badge">💰 Bug Bounty</div>
-            <h1 class="post-title-cyber">Bug Bounty Hunter <strong>Complete Guide</strong></h1>
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 28px 18px 70px; }
+            .section { padding: 26px 22px; border-radius: 16px; }
+            .section-title { font-size: 20px; gap: 12px; }
+            .section-title .icon { width: 40px; height: 40px; font-size: 18px; }
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 15px; }
+            .toc { padding: 20px 18px; }
+            .toc-list { grid-template-columns: 1fr; }
+            p { font-size: 14.5px; }
+            ul li { font-size: 14px; }
+            ol li { font-size: 14px; }
+            .code-block { font-size: 12px; padding: 16px 14px; }
+            .code-block code { font-size: 12px; }
+            h3 { font-size: 16px; }
+            .use-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 20px 12px 60px; }
+            h1 { font-size: 26px; }
+            .section { padding: 22px 16px; }
+            .section-title { font-size: 17px; }
+            .section-title .icon { width: 34px; height: 34px; font-size: 15px; }
+            .meta-bar { gap: 8px; }
+            .meta-item { font-size: 11px; padding: 6px 12px; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #05080e; }
+        ::-webkit-scrollbar-thumb { background: #1a2a2a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff8833; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="badge">
+            <span class="dot"></span>
+            CYBERSUME · COMPLETE GUIDE
         </div>
-
-        <!-- ===== INTRODUCTION ===== -->
-        <p>
-            A <strong>Bug Bounty Hunter</strong> is a <strong>cybersecurity</strong> researcher who finds and reports security flaws in websites, apps, and systems in exchange for cash rewards (bounties) from companies like <strong>Google</strong>, <strong>Facebook</strong>, and Uber.
+        <h1>Bug Bounty <span class="highlight">Hunter</span></h1>
+        <p class="subtitle">
+            The complete, in-depth guide to bug bounty hunting — from getting started to earning your first bounty. 
+            Learn the tools, techniques, and mindset of professional hunters.
         </p>
 
-        <!-- ===== BOUNTY POWER BOX ===== -->
-        <div class="bounty-power-box">
-            <p class="big-text">💰 Find Bugs. Get Paid. Repeat.</p>
-            <p style="color:#b0b8c8;">
-                <strong style="color:#ffcc00;">From $50 to $500,000+</strong> — Turn your security skills into real cash!
-            </p>
+        <div class="meta-bar">
+            <div class="meta-item"><span class="ico">📖</span> <span>Reading time: <strong>35 min</strong></span></div>
+            <div class="meta-item"><span class="ico">🎯</span> <span>Category: <strong>Ethical Hacking</strong></span></div>
+            <div class="meta-item"><span class="ico">🛡️</span> <span>Level: <strong>Beginner → Advanced</strong></span></div>
+            <div class="meta-item"><span class="ico">⚡</span> <span>Updated: <strong>2025</strong></span></div>
         </div>
-        <script async="async" data-cfasync="false" src="https://mergerindirect.com/aa647107e47abf023a29284552085aba/invoke.js"></script>
-<div id="container-aa647107e47abf023a29284552085aba"></div>
+    </header>
 
-        <!-- ===== HOW BOUNTIES WORK ===== -->
-        <h2>💰 How Bug Bounties Work</h2>
+    <!-- ===== TABLE OF CONTENTS ===== -->
+    <nav class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul class="toc-list">
+            <li><a href="#intro"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#what"><span class="num">02</span> What Is Bug Bounty?</a></li>
+            <li><a href="#platforms"><span class="num">03</span> Top Platforms</a></li>
+            <li><a href="#mindset"><span class="num">04</span> Hunter's Mindset</a></li>
+            <li><a href="#skills"><span class="num">05</span> Essential Skills</a></li>
+            <li><a href="#toolkit"><span class="num">06</span> The Hunter's Toolkit</a></li>
+            <li><a href="#recon"><span class="num">07</span> Reconnaissance</a></li>
+            <li><a href="#vulns"><span class="num">08</span> Common Vulnerabilities</a></li>
+            <li><a href="#methodology"><span class="num">09</span> Hunting Methodology</a></li>
+            <li><a href="#reporting"><span class="num">10</span> Writing Reports</a></li>
+            <li><a href="#earning"><span class="num">11</span> Earning Bounties</a></li>
+            <li><a href="#career"><span class="num">12</span> Career Path</a></li>
+            <li><a href="#best"><span class="num">13</span> Best Practices</a></li>
+            <li><a href="#legal"><span class="num">14</span> Legal &amp; Ethics</a></li>
+            <li><a href="#conclusion"><span class="num">15</span> Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== 01 INTRO ===== -->
+    <section class="section" id="intro">
+        <span class="section-number">01 · INTRODUCTION</span>
+        <h2 class="section-title">
+            <span class="icon">🎯</span>
+            What Is Bug Bounty Hunting?
+        </h2>
+        <p>
+            <strong>Bug bounty hunting</strong> is the practice of finding security vulnerabilities in websites, applications, and systems — and getting <em>paid</em> for reporting them responsibly. Companies invite ethical hackers to test their systems, and reward those who find real bugs with cash bounties, swag, or recognition.
+        </p>
+        <p>
+            It's the ultimate freelance career for ethical hackers. You work when you want, on targets you choose, from anywhere in the world. Top hunters earn <strong>$500,000+ per year</strong>, and some have earned over $1 million. But more importantly, bug bounty hunting is one of the most effective ways to develop real-world security skills.
+        </p>
+        <p>
+            In this comprehensive guide, we'll cover everything you need to become a successful bug bounty hunter — from choosing a platform to writing winning reports.
+        </p>
+        <div class="callout info">
+            <strong>💡 Note:</strong> Bug bounty hunting is a <em>marathon, not a sprint</em>. The first few months are about learning. Most successful hunters earn their first bounty after 3–6 months of dedicated practice.
+        </div>
+    </section>
+
+    <!-- ===== 02 WHAT ===== -->
+    <section class="section" id="what">
+        <span class="section-number">02 · WHAT IS BUG BOUNTY</span>
+        <h2 class="section-title">
+            <span class="icon">💰</span>
+            How Bug Bounties Work
+        </h2>
+
+        <h3>The Basic Flow</h3>
         <ol>
-            <li><strong style="color:#ffcc00;">Target Selection</strong> — Choose a program (e.g., HackerOne, Bugcrowd).</li>
-            <li><strong style="color:#ffcc00;">Recon &amp; Testing</strong> — Hunt for vulnerabilities (e.g., SQLi, XSS, RCE).</li>
-            <li><strong style="color:#ffcc00;">Submit a Report</strong> — Document the bug with PoC (Proof of Concept).</li>
-            <li><strong style="color:#ffcc00;">Get Paid</strong> — Rewards range from $50 to $500,000+ per bug.</li>
+            <li><strong>Company publishes a program</strong> — Defines scope, rules, and rewards.</li>
+            <li><strong>Hunter finds a vulnerability</strong> — In scope, not already reported.</li>
+            <li><strong>Hunter submits a report</strong> — With clear reproduction steps.</li>
+            <li><strong>Company triages</strong> — Validates the vulnerability.</li>
+            <li><strong>Bounty is awarded</strong> — Cash or recognition.</li>
+            <li><strong>Vulnerability is fixed</strong> — Company patches, hunter gets paid.</li>
         </ol>
 
-        <!-- ===== FEATURED IMAGES WITH AMAZON LINK ===== -->
-        <div class="featured-box">
-            <div class="featured-image">
-                <a href="https://www.amazon.com/dp/B0GTYGBHF5" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhy_XtOYRLyhguWyRc6QFil_NWiRqI0ZzVXaSbeCJO44jtI1sDBWM1E6r8YqKnf82BNicZk_Ofo6praW0GxWEy-ZO8d156HQIKRhqupEUz5wh_bmxtX2_mDWOK-NSXofBURV1k3mHMNHKLnWib-3xmDumKyY6Y7IgBojECmIvt_gwn8alG809VV3hJAZ785/s320/image.png" 
-                         alt="Bug Bounty Hunter Book"/>
-                </a>
-                
+        <h3>Types of Programs</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🌐</span>
+                <h4>Public Programs</h4>
+                <p>Open to all hunters. Competitive but large scope.</p>
             </div>
-            <div class="featured-cta">
-                <p>📚 <strong style="color:#ffcc00;">Get Your Copy Today!</strong></p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0GTYGBHF5" target="_blank" rel="noopener">
-                    🛒 Buy Now on Amazon
-                </a>
-                
+            <div class="use-card">
+                <span class="use-icon">🔒</span>
+                <h4>Private Programs</h4>
+                <p>Invite-only. Less competition, better payouts.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🛡️</span>
+                <h4>VDP (Vulnerability Disclosure)</h4>
+                <p>No pay — recognition only. Good for beginners.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🏢</span>
+                <h4>Self-Hosted</h4>
+                <p>Company runs their own bounty. Common at big tech.</p>
             </div>
         </div>
 
-        <hr/>
+        <h3>Real Bounty Examples</h3>
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="stat-num">$50k</div>
+                <div class="stat-lbl">Top Single Bounty</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">$1M+</div>
+                <div class="stat-lbl">Top Hunter / Year</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">$5k</div>
+                <div class="stat-lbl">Typical Critical Bug</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">$500</div>
+                <div class="stat-lbl">Typical Medium Bug</div>
+            </div>
+        </div>
+    </section>
 
-        <!-- ===== TOP PLATFORMS ===== -->
-        <h2 id="platforms">🔥 Top Bug Bounty Platforms</h2>
+    <!-- ===== 03 PLATFORMS ===== -->
+    <section class="section" id="platforms">
+        <span class="section-number">03 · PLATFORMS</span>
+        <h2 class="section-title">
+            <span class="icon">🏢</span>
+            Top Bug Bounty Platforms
+        </h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Platform</th>
-                    <th>Popular Programs</th>
-                    <th>Avg. Payout</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>HackerOne</td>
-                    <td>Uber, Twitter, GitHub</td>
-                    <td>$500–$20K</td>
-                </tr>
-                <tr>
-                    <td>Bugcrowd</td>
-                    <td>AWS, Tesla, Cisco</td>
-                    <td>$300–$15K</td>
-                </tr>
-                <tr>
-                    <td>Intigriti</td>
-                    <td>European companies</td>
-                    <td>$200–$10K</td>
-                </tr>
-                <tr>
-                    <td>Open Bug Bounty</td>
-                    <td>Non-profit sites</td>
-                    <td>$0–$1K (mostly recognition)</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Platform</th><th>Programs</th><th>Best For</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>HackerOne</strong></td><td>2000+</td><td>Beginners → Pros</td></tr>
+                    <tr><td><strong>Bugcrowd</strong></td><td>1500+</td><td>Beginners → Pros</td></tr>
+                    <tr><td><strong>Intigriti</strong></td><td>500+</td><td>European hunters</td></tr>
+                    <tr><td><strong>YesWeHack</strong></td><td>400+</td><td>Global + Europe</td></tr>
+                    <tr><td><strong>Synack</strong></td><td>Private</td><td>Vetted professionals</td></tr>
+                    <tr><td><strong>Open Bug Bounty</strong></td><td>Open</td><td>Non-monetary (recognition)</td></tr>
+                    <tr><td><strong>Google VRP</strong></td><td>Self-hosted</td><td>Google assets only</td></tr>
+                    <tr><td><strong>Microsoft MSRC</strong></td><td>Self-hosted</td><td>Microsoft products</td></tr>
+                    <tr><td><strong>Apple Security</strong></td><td>Self-hosted</td><td>Apple products</td></tr>
+                    <tr><td><strong>Facebook / Meta</strong></td><td>Self-hosted</td><td>Meta assets</td></tr>
+                </tbody>
+            </table>
+        </div>
 
-        <hr/>
+        <div class="callout">
+            <strong>💡 Recommendation:</strong> Start with <strong>HackerOne</strong> or <strong>Bugcrowd</strong>. They have the most programs, best onboarding, and active communities.
+        </div>
+    </section>
 
-        <!-- ===== ESSENTIAL TOOLS ===== -->
-        <h2 id="tools">🛠️ Essential Tools for Bug Hunting</h2>
+    <!-- ===== 04 MINDSET ===== -->
+    <section class="section" id="mindset">
+        <span class="section-number">04 · MINDSET</span>
+        <h2 class="section-title">
+            <span class="icon">🧠</span>
+            The Bug Hunter's Mindset
+        </h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Tools</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Recon</td>
-                    <td>Amass, Subfinder, Wayback Machine</td>
-                </tr>
-                <tr>
-                    <td>Web Testing</td>
-                    <td>Burp Suite, OWASP ZAP, Nuclei</td>
-                </tr>
-                <tr>
-                    <td>Automation</td>
-                    <td>Hakrawler, Gau, FFUF</td>
-                </tr>
-                <tr>
-                    <td>Exploitation</td>
-                    <td>SQLmap, XSS Hunter, Commix</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <hr/>
-
-        <!-- ===== MOST PROFITABLE ===== -->
-        <h2 id="vulnerabilities">📌 Most Profitable Vulnerabilities</h2>
-        <ol>
-            <li><strong style="color:#ff6b6b;">Remote Code Execution (RCE)</strong> — $5K–$100K</li>
-            <li><strong style="color:#ff6b6b;">SQL Injection (SQLi)</strong> — $1K–$15K</li>
-            <li><strong style="color:#ff6b6b;">Cross-Site Scripting (XSS)</strong> — $500–$10K</li>
-            <li><strong style="color:#ff6b6b;">Business Logic Flaws</strong> — $1K–$50K</li>
-            <li><strong style="color:#ff6b6b;">Authentication Bypass</strong> — $2K–$20K</li>
-        </ol>
-
-        <hr/>
-
-        <!-- ===== HOW TO START ===== -->
-        <h2 id="start">🚀 How to Start?</h2>
-        <ol>
-            <li><strong style="color:#ffcc00;">Learn Web Security</strong> — Study OWASP Top 10.</li>
-            <li><strong style="color:#ffcc00;">Practice on Labs</strong> — PortSwigger Web Academy, Hack The Box.</li>
-            <li><strong style="color:#ffcc00;">Join a Platform</strong> — Sign up on HackerOne/Bugcrowd.</li>
-            <li><strong style="color:#ffcc00;">Start Small</strong> — Hunt for low-hanging fruit (XSS, IDOR).</li>
-            <li><strong style="color:#ffcc00;">Build Reputation</strong> — High-quality reports = private invites.</li>
-        </ol>
-
-        <hr/>
-
-        <!-- ===== PRO TIPS ===== -->
-        <h2 id="tips">💡 Pro Tips for Success</h2>
+        <h3>Key Mental Models</h3>
         <ul>
-            <li><strong style="color:#ffcc00;">Read Program Scopes</strong> — Avoid out-of-bound testing.</li>
-            <li><strong style="color:#ffcc00;">Write Clear Reports</strong> — Include steps, screenshots, video PoC.</li>
-            <li><strong style="color:#ffcc00;">Stay Ethical</strong> — Never exploit without permission.</li>
-            <li><strong style="color:#ffcc00;">Specialize</strong> — Focus on APIs, mobile apps, or cloud.</li>
+            <li><strong>Think like a developer</strong> — What did they forget to secure?</li>
+            <li><strong>Think like an attacker</strong> — How would I break this?</li>
+            <li><strong>Think like a user</strong> — What's the intended use case? How can I abuse it?</li>
+            <li><strong>Question everything</strong> — Trust nothing. Test everything.</li>
+            <li><strong>Be patient</strong> — Most time is spent finding, not exploiting.</li>
+            <li><strong>Be persistent</strong> — The bug is often one more click away.</li>
+            <li><strong>Be creative</strong> — Automation finds the obvious; creativity finds the hidden.</li>
         </ul>
 
-        <div class="ethics-box">
-            <p>⚖️ <strong>Always stay ethical!</strong> Never test without explicit permission. Bug bounty is about defense, not offense.</p>
+        <h3>The Hunter's Cycle</h3>
+        <div class="code-block" data-lang="text">
+<code>Recon → Map Attack Surface → Hypothesize Vulnerabilities
+  ↑                                              ↓
+  ↑                                          Test & Verify
+  ↑                                              ↓
+Report ← Write Up ← Confirm Impact ← Validate Exploit</code>
         </div>
 
-        <hr/>
+        <div class="callout info">
+            <strong>💡 Reality Check:</strong> 90% of your time will be spent on recon and testing. Only 10% on exploiting and reporting. That's normal — the payoff comes from persistence.
+        </div>
+    </section>
 
-        <!-- ===== CAREER PATH ===== -->
-        <h2 id="career">📈 Career Path</h2>
+    <!-- ===== 05 SKILLS ===== -->
+    <section class="section" id="skills">
+        <span class="section-number">05 · SKILLS</span>
+        <h2 class="section-title">
+            <span class="icon">🔧</span>
+            Essential Skills for Bug Hunters
+        </h2>
+
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🌐</span>
+                <h4>Web Technologies</h4>
+                <p>HTTP, HTML, JavaScript, APIs, cookies, sessions, CORS.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔎</span>
+                <h4>Recon Mastery</h4>
+                <p>Subdomain enumeration, port scanning, directory brute-force.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">💉</span>
+                <h4>Vulnerability Knowledge</h4>
+                <p>OWASP Top 10, business logic, race conditions, SSRF, XXE.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🐍</span>
+                <h4>Scripting</h4>
+                <p>Python, Bash — automate the boring stuff.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📝</span>
+                <h4>Report Writing</h4>
+                <p>Clear, professional reports get paid faster.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🧘</span>
+                <h4>Patience &amp; Persistence</h4>
+                <p>The #1 skill. Bugs take time to find.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🕵️</span>
+                <h4>OSINT</h4>
+                <p>Google dorking, GitHub recon, wayback machine, Shodan.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">⚙️</span>
+                <h4>Tool Proficiency</h4>
+                <p>Burp, Nmap, Amass, Nuclei, FFUF, httpx, dnsx.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 06 TOOLKIT ===== -->
+    <section class="section" id="toolkit">
+        <span class="section-number">06 · TOOLKIT</span>
+        <h2 class="section-title">
+            <span class="icon">🧰</span>
+            The Bug Hunter's Toolkit
+        </h2>
+
+        <h3>Reconnaissance Tools</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Tool</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>Amass</code></td><td>Subdomain enumeration (80+ sources)</td></tr>
+                    <tr><td><code>subfinder</code></td><td>Fast subdomain discovery</td></tr>
+                    <tr><td><code>assetfinder</code></td><td>Find related domains and subdomains</td></tr>
+                    <tr><td><code>dnsx</code></td><td>DNS resolution and probing</td></tr>
+                    <tr><td><code>httpx</code></td><td>HTTP probing and tech detection</td></tr>
+                    <tr><td><code>naabu</code></td><td>Fast port scanner</td></tr>
+                    <tr><td><code>nmap</code></td><td>Comprehensive port scanning</td></tr>
+                    <tr><td><code>gau</code></td><td>Fetch URLs from Wayback, Common Crawl, etc.</td></tr>
+                    <tr><td><code>waybackurls</code></td><td>Fetch historical URLs</td></tr>
+                    <tr><td><code>katana</code></td><td>Next-gen web crawling</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Vulnerability Discovery</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Tool</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>Burp Suite</code></td><td>Web proxy, repeater, intruder, scanner</td></tr>
+                    <tr><td><code>ffuf</code></td><td>Fast web fuzzer</td></tr>
+                    <tr><td><code>gobuster</code></td><td>Directory/DNS brute-force</td></tr>
+                    <tr><td><code>nuclei</code></td><td>Template-based vulnerability scanner</td></tr>
+                    <tr><td><code>sqlmap</code></td><td>SQL injection automation</td></tr>
+                    <tr><td><code>XSStrike</code></td><td>XSS detection</td></tr>
+                    <tr><td><code>dalfox</code></td><td>Fast XSS scanner</td></tr>
+                    <tr><td><code>arjun</code></td><td>HTTP parameter discovery</td></tr>
+                    <tr><td><code>ParamSpider</code></td><td>Parameter mining from URLs</td></tr>
+                    <tr><td><code>gxss</code></td><td>XSS reflection check</td></tr>
+                    <tr><td><code>Interactsh</code></td><td>Out-of-band interaction detection (OOB)</td></tr>
+                    <tr><td><code>JWT_Tool</code></td><td>JWT manipulation and testing</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Content Discovery</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">📁</span>
+                <h4>SecLists</h4>
+                <p>The essential wordlist collection — directories, params, passwords.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Assetnote Wordlists</h4>
+                <p>High-quality wordlists for specific technologies.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔍</span>
+                <h4>Google Dorks</h4>
+                <p>Find exposed files, admin panels, error pages.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📚</span>
+                <h4>Wayback Machine</h4>
+                <p>Historical URLs reveal forgotten endpoints.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 07 RECON ===== -->
+    <section class="section" id="recon">
+        <span class="section-number">07 · RECONNAISSANCE</span>
+        <h2 class="section-title">
+            <span class="icon">🔎</span>
+            Reconnaissance — The Foundation
+        </h2>
+        <p>
+            90% of successful bug bounties come from <strong>thorough reconnaissance</strong>. The more surface you map, the more bugs you'll find. Recon is where the real advantage is built.
+        </p>
+
+        <h3>Recon Phases</h3>
+        <ol>
+            <li><strong>Subdomain enumeration</strong> — Find every possible subdomain.</li>
+            <li><strong>DNS resolution</strong> — Confirm which subdomains are alive.</li>
+            <li><strong>Port scanning</strong> — Discover services on each host.</li>
+            <li><strong>HTTP probing</strong> — Identify web servers, titles, tech stack.</li>
+            <li><strong>Content discovery</strong> — Find hidden directories, files, params.</li>
+            <li><strong>Historical data</strong> — Wayback, Google cache, GitHub leaks.</li>
+            <li><strong>OSINT</strong> — Emails, credentials, API keys, docs.</li>
+        </ol>
+
+        <h3>Full Recon Pipeline</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt">#!/bin/bash
+# Bug Bounty Recon Pipeline</span>
+
+<span class="var">DOMAIN</span>=<span class="str">"target.com"</span>
+<span class="var">OUT</span>=<span class="str">"recon_$DOMAIN"</span>
+<span class="cmd">mkdir</span> -p <span class="var">$OUT</span>
+
+<span class="cmt"># 1. Subdomain enumeration</span>
+<span class="cmd">subfinder</span> -d <span class="var">$DOMAIN</span> -silent &gt; <span class="var">$OUT</span>/subs.txt
+<span class="cmd">amass</span> enum -passive -d <span class="var">$DOMAIN</span> &gt;&gt; <span class="var">$OUT</span>/subs.txt
+<span class="cmd">assetfinder</span> --subs-only <span class="var">$DOMAIN</span> &gt;&gt; <span class="var">$OUT</span>/subs.txt
+<span class="cmd">sort</span> -u <span class="var">$OUT</span>/subs.txt -o <span class="var">$OUT</span>/subs.txt
+
+<span class="cmt"># 2. DNS resolution (find live hosts)</span>
+<span class="cmd">cat</span> <span class="var">$OUT</span>/subs.txt | <span class="cmd">dnsx</span> -silent -a -resp &gt; <span class="var">$OUT</span>/resolved.txt
+
+<span class="cmt"># 3. HTTP probing</span>
+<span class="cmd">cat</span> <span class="var">$OUT</span>/subs.txt | <span class="cmd">httpx</span> -silent -sc -title -td -o <span class="var">$OUT</span>/live.txt
+
+<span class="cmt"># 4. Port scanning</span>
+<span class="cmd">naabu</span> -list <span class="var">$OUT</span>/subs.txt -top-ports 1000 -silent &gt; <span class="var">$OUT</span>/ports.txt
+
+<span class="cmt"># 5. URL gathering</span>
+<span class="cmd">cat</span> <span class="var">$OUT</span>/subs.txt | <span class="cmd">gau</span> &gt; <span class="var">$OUT</span>/urls.txt
+<span class="cmd">cat</span> <span class="var">$OUT</span>/subs.txt | <span class="cmd">waybackurls</span> &gt;&gt; <span class="var">$OUT</span>/urls.txt
+<span class="cmd">sort</span> -u <span class="var">$OUT</span>/urls.txt -o <span class="var">$OUT</span>/urls.txt
+
+<span class="cmt"># 6. Parameter discovery</span>
+<span class="cmd">cat</span> <span class="var">$OUT</span>/urls.txt | <span class="cmd">grep</span> <span class="str">"="</span> | <span class="cmd">qsreplace</span> FUZZ &gt; <span class="var">$OUT</span>/params.txt
+
+<span class="cmt"># 7. Vulnerability scanning</span>
+<span class="cmd">cat</span> <span class="var">$OUT</span>/live.txt | <span class="cmd">nuclei</span> -silent -t cves/ -t exposures/ &gt; <span class="var">$OUT</span>/nuclei.txt
+
+<span class="cmd">echo</span> <span class="str">"[✓] Recon complete. Results in $OUT/"</span></code>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Pro Tip:</strong> Recon is never "done". Always keep looking. New subdomains, forgotten URLs, and leaked credentials appear all the time.
+        </div>
+    </section>
+
+    <!-- ===== 08 VULNS ===== -->
+    <section class="section" id="vulns">
+        <span class="section-number">08 · VULNERABILITIES</span>
+        <h2 class="section-title">
+            <span class="icon">💥</span>
+            Most Common Bug Bounty Vulnerabilities
+        </h2>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Vulnerability</th><th>Severity</th><th>Typical Bounty</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>RCE</strong> — Remote Code Execution</td>
+                        <td><span class="sev sev-critical">Critical</span></td>
+                        <td>$5,000 – $50,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SQL Injection</strong> — Database compromise</td>
+                        <td><span class="sev sev-critical">Critical</span></td>
+                        <td>$2,000 – $20,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SSRF</strong> — Server-Side Request Forgery</td>
+                        <td><span class="sev sev-high">High</span></td>
+                        <td>$1,000 – $15,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IDOR</strong> — Insecure Direct Object Reference</td>
+                        <td><span class="sev sev-high">High</span></td>
+                        <td>$500 – $5,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Auth Bypass</strong> — Login/auth logic flaws</td>
+                        <td><span class="sev sev-critical">Critical</span></td>
+                        <td>$1,000 – $10,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XSS</strong> — Cross-Site Scripting</td>
+                        <td><span class="sev sev-medium">Medium</span></td>
+                        <td>$200 – $3,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XXE</strong> — XML External Entity</td>
+                        <td><span class="sev sev-high">High</span></td>
+                        <td>$500 – $5,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CSRF</strong> — Cross-Site Request Forgery</td>
+                        <td><span class="sev sev-medium">Medium</span></td>
+                        <td>$200 – $2,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Open Redirect</strong></td>
+                        <td><span class="sev sev-low">Low</span></td>
+                        <td>$100 – $500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Subdomain Takeover</strong></td>
+                        <td><span class="sev sev-high">High</span></td>
+                        <td>$300 – $5,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Business Logic Flaws</strong></td>
+                        <td><span class="sev sev-high">High</span></td>
+                        <td>$500 – $10,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Race Conditions</strong></td>
+                        <td><span class="sev sev-high">High</span></td>
+                        <td>$500 – $8,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JWT Vulnerabilities</strong></td>
+                        <td><span class="sev sev-high">High</span></td>
+                        <td>$500 – $5,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout">
+            <strong>🔑 Key Insight:</strong> The highest bounties come from <em>logic flaws</em>, <em>auth bypasses</em>, and <em>RCE</em>. XSS is common but typically pays less. Focus on high-impact bugs for maximum ROI.
+        </div>
+    </section>
+
+    <!-- ===== 09 METHODOLOGY ===== -->
+    <section class="section" id="methodology">
+        <span class="section-number">09 · METHODOLOGY</span>
+        <h2 class="section-title">
+            <span class="icon">🔄</span>
+            A Hunter's Methodology
+        </h2>
+
+        <ol>
+            <li><strong>Read the program rules</strong> — Scope, exclusions, out-of-scope bugs.</li>
+            <li><strong>Pick a target</strong> — Start with smaller programs to learn.</li>
+            <li><strong>Recon deeply</strong> — Subdomains, URLs, params, JS files, secrets.</li>
+            <li><strong>Map the attack surface</strong> — What endpoints, params, and features exist?</li>
+            <li><strong>Choose a vulnerability class</strong> — Focus on one at a time.</li>
+            <li><strong>Test systematically</strong> — Enumerate all possible injection points.</li>
+            <li><strong>Verify impact</strong> — Prove the bug is real and exploitable.</li>
+            <li><strong>Document everything</strong> — Screenshots, request/response, timestamps.</li>
+            <li><strong>Write a clear report</strong> — Title, severity, steps, impact, PoC, remediation.</li>
+            <li><strong>Submit and wait</strong> — Triage takes days to weeks.</li>
+            <li><strong>Follow up politely</strong> — If no response after 2 weeks, ping again.</li>
+            <li><strong>Learn from response</strong> — Dupes, N/A, or paid — every submission teaches.</li>
+        </ol>
+
+        <h3>Where to Focus First</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🔎</span>
+                <h4>Recon</h4>
+                <p>More endpoints = more bugs. This is where you win.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔐</span>
+                <h4>Authentication</h4>
+                <p>Login, signup, password reset, 2FA — always buggy.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">💳</span>
+                <h4>Business Logic</h4>
+                <p>Payment, discounts, subscriptions — high-impact flaws.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📡</span>
+                <h4>API Endpoints</h4>
+                <p>APIs often have less security than web UIs.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>IDOR</h4>
+                <p>Change IDs, see what happens. Simple but powerful.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📝</span>
+                <h4>JS Files</h4>
+                <p>Read JavaScript — APIs, keys, and endpoints are hidden there.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 10 REPORTING ===== -->
+    <section class="section" id="reporting">
+        <span class="section-number">10 · REPORTING</span>
+        <h2 class="section-title">
+            <span class="icon">📝</span>
+            Writing Winning Reports
+        </h2>
+        <p>
+            A great report gets paid faster, at higher severity, and builds your reputation. A poor report gets closed as "informational" or "N/A".
+        </p>
+
+        <h3>Report Structure</h3>
+        <div class="code-block" data-lang="text">
+<code>1. Title              →  Clear, specific: "SQL Injection in /api/login"
+2. Severity           →  Critical / High / Medium / Low
+3. Summary            →  1-2 sentence overview of the vulnerability
+4. Steps to Reproduce →  Numbered, precise, copy-paste commands
+5. Proof of Concept   →  Screenshots, HTTP requests, output
+6. Impact             →  What can an attacker do? Be specific.
+7. Remediation        →  How to fix it (prepared statements, etc.)
+8. References         →  OWASP, CWE, CVE links</code>
+        </div>
+
+        <h3>Winning Report Tips</h3>
         <ul>
-            <li><strong style="color:#ffcc00;">Beginner:</strong> Find easy bugs (XSS, CSRF) → $1K–$5K/month.</li>
-            <li><strong style="color:#ffcc00;">Intermediate:</strong> Discover RCE, SSRF → $10K–$50K/month.</li>
-            <li><strong style="color:#ffcc00;">Advanced:</strong> Full-time hunter → $100K+/year.</li>
+            <li><strong>Be concise</strong> — Triagers read hundreds of reports.</li>
+            <li><strong>Show the impact</strong> — Don't just prove it works, prove why it matters.</li>
+            <li><strong>Use curl commands</strong> — Copy-paste reproduction is fastest.</li>
+            <li><strong>Include screenshots</strong> — Visual evidence speeds triage.</li>
+            <li><strong>Suggest the fix</strong> — Shows expertise; gets higher severity.</li>
+            <li><strong>Don't exaggerate</strong> — False claims hurt your reputation.</li>
+            <li><strong>Follow up politely</strong> — After 2 weeks if no response.</li>
         </ul>
 
-        <hr/>
-
-        <!-- ===== FINAL THOUGHTS ===== -->
-        <h2 id="final">💭 Final Thoughts</h2>
-        <p>
-            Bug bounty hunting is lucrative but competitive. Success requires persistence, creativity, and deep security knowledge. Start with free training, then hunt responsibly!
-        </p>
-        <p style="color:#ffcc00;font-size:18px;font-weight:700;text-align:center;">
-            🚀 Want a step-by-step guide to your first bounty? Ask below!
-        </p>
-
-        <!-- ===== BOOK HIGHLIGHT ===== -->
-        <div class="book-highlight">
-            <p class="highlight-title">⭐ From Beginner to Professional Bug Bounty Hunter</p>
-            <p style="color:#b0b8c8;">
-                Master the art of finding vulnerabilities and earning real cash rewards!
-            </p>
+        <div class="callout">
+            <strong>💡 Pro Tip:</strong> A well-written report for a Medium bug often gets paid faster than a poorly-written Critical. Quality matters.
         </div>
+    </section>
 
-        <!-- ===== FINAL CTA ===== -->
-        <div class="book-highlight" style="border-color:#ffcc00;background:linear-gradient(135deg,rgba(255,204,0,0.08),rgba(0,255,136,0.05));">
-            <p class="highlight-title" style="color:#ffcc00;">💰 Ready to Start Your Bug Bounty Journey?</p>
-            <p style="color:#b0b8c8;font-size:16px;">
-                Turn your security skills into real cash rewards. Start hunting today!
-            </p>
-            <br/>
-            <a class="main-link" href="https://www.amazon.com/dp/B0GTYGBHF5" target="_blank" rel="noopener" 
-               style="display:inline-block;padding:15px 42px;background:linear-gradient(135deg,#ffcc00,#ff9900);color:#000000 !important;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px;">
-                🛒 Buy Now on Amazon
-            </a>
-            <p class="small-note" style="color:#6a7290 !important;font-size:13px;margin-top:12px;">
-                Start your bug bounty journey today — Get your copy now!
-            </p>
-        </div>
+    <!-- ===== 11 EARNING ===== -->
+    <section class="section" id="earning">
+        <span class="section-number">11 · EARNING</span>
+        <h2 class="section-title">
+            <span class="icon">💰</span>
+            Earning Your First Bounty
+        </h2>
 
-        <hr/>
-
-        <!-- ===== SHARE SECTION ===== -->
-        <div class="share-section">
-            <p>📤 Share this book recommendation with your network</p>
-            <div class="share-buttons">
-                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Bug%20Bounty%20Hunter%20-%20Complete%20Guide%20to%20Finding%20Vulnerabilities%20and%20Earning%20Cash%20Rewards!%20%23BugBounty%20%23CyberSecurity%20%23EthicalHacking','_blank');return false;">
-                    🐦 Twitter
-                </a>
-                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    📘 Facebook
-                </a>
-                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    💼 LinkedIn
-                </a>
+        <h3>Realistic Expectations</h3>
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="stat-num">3-6 mo</div>
+                <div class="stat-lbl">To First Bounty</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">$50-500</div>
+                <div class="stat-lbl">Typical First Payout</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">10-20%</div>
+                <div class="stat-lbl">Valid Submission Rate</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">$5k-50k</div>
+                <div class="stat-lbl">Top Hunter Monthly</div>
             </div>
         </div>
 
-    </div>
+        <h3>Strategies for Beginners</h3>
+        <ol>
+            <li><strong>Start with VDP programs</strong> — No pay, but valuable practice.</li>
+            <li><strong>Pick small scope</strong> — Less competition, higher chance of finding bugs.</li>
+            <li><strong>Newly launched programs</strong> — Everyone's starting fresh.</li>
+            <li><strong>Focus on one vuln type</strong> — Master XSS or IDOR before spreading thin.</li>
+            <li><strong>Read disclosed reports</strong> — HackerOne Hacktivity is a goldmine.</li>
+            <li><strong>Automate recon</strong> — Free your time for manual testing.</li>
+            <li><strong>Join communities</strong> — Discord, Twitter, r/bugbounty.</li>
+        </ol>
+
+        <h3>Learn from Disclosed Reports</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Best places to study disclosed reports:</span>
+<span class="cmt"># https://hackerone.com/hacktivity</span>
+<span class="cmt"># https://bugcrowd.com/disclosures</span>
+<span class="cmt"># https://pentester.land/list-of-bug-bounty-writeups/</span>
+<span class="cmt"># https://github.com/devanshbatham/Awesome-Bugbounty-Writeups</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 12 CAREER ===== -->
+    <section class="section" id="career">
+        <span class="section-number">12 · CAREER PATH</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Bug Bounty as a Career
+        </h2>
+
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">💼</span>
+                <h4>Full-Time Hunter</h4>
+                <p>Top 1% earn $500k+/year. Requires years of experience.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🌙</span>
+                <h4>Side Income</h4>
+                <p>Most hunters do this part-time — $500–5k/month extra.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Portfolio Builder</h4>
+                <p>Bug bounties prove your skills — great for job hunting.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🛡️</span>
+                <h4>Pentester Career</h4>
+                <p>Bug bounty skills translate directly to pentesting jobs.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎤</span>
+                <h4>Content Creator</h4>
+                <p>Write writeups, teach courses, speak at cons.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🏢</span>
+                <h4>Bug Bounty Team</h4>
+                <p>Companies hire in-house teams to run their programs.</p>
+            </div>
+        </div>
+
+        <h3>Recommended Certifications</h3>
+        <ul>
+            <li><strong>OSCP</strong> — Offensive Security Certified Professional</li>
+            <li><strong>OSWE</strong> — Offensive Security Web Expert</li>
+            <li><strong>eWPTX</strong> — eLearnSecurity Web Application Pentester eXtreme</li>
+            <li><strong>Burp Suite Certified Practitioner</strong> — PortSwigger</li>
+            <li><strong>PortSwigger Web Security Academy</strong> — Free!</li>
+        </ul>
+    </section>
+
+    <!-- ===== 13 BEST ===== -->
+    <section class="section" id="best">
+        <span class="section-number">13 · BEST PRACTICES</span>
+        <h2 class="section-title">
+            <span class="icon">✅</span>
+            Bug Bounty Best Practices
+        </h2>
+        <ol>
+            <li><strong>Read the rules first</strong> — Scope, out-of-scope, and testing restrictions.</li>
+            <li><strong>Never test without authorization</strong> — Even a simple scan can be illegal.</li>
+            <li><strong>Don't cause damage</strong> — No DoS, no data destruction, no service disruption.</li>
+            <li><strong>Be patient with triage</strong> — Responses take days to weeks.</li>
+            <li><strong>Don't spam duplicates</strong> — Same bug in 50 URLs = 1 report.</li>
+            <li><strong>Report quality &gt; quantity</strong> — One great report beats ten poor ones.</li>
+            <li><strong>Don't disclose without permission</strong> — Wait for the fix.</li>
+            <li><strong>Learn from rejections</strong> — Each "N/A" teaches something.</li>
+            <li><strong>Build relationships</strong> — Triagers remember good reporters.</li>
+            <li><strong>Stay humble</strong> — Every hunter started where you are.</li>
+        </ol>
+    </section>
+
+    <!-- ===== 14 LEGAL ===== -->
+    <section class="section" id="legal">
+        <span class="section-number">14 · LEGAL &amp; ETHICS</span>
+        <h2 class="section-title">
+            <span class="icon">⚖️</span>
+            Legal &amp; Ethical Boundaries
+        </h2>
+        <div class="callout warn">
+            <strong>⚠️ Critical Warning:</strong> Bug bounty hunting is only legal when you follow the program's rules <em>exactly</em>. Testing outside scope, even on a "related" asset, is <strong>illegal</strong> and can result in criminal charges.
+        </div>
+
+        <h3>Golden Rules</h3>
+        <ul>
+            <li><strong>Only test in-scope assets</strong> — Never stray from the defined scope.</li>
+            <li><strong>Follow the program rules</strong> — Every program has specific rules.</li>
+            <li><strong>Don't access user data</strong> — If you find it, report it — don't download it.</li>
+            <li><strong>Don't disrupt services</strong> — No DoS, no data modification, no crashes.</li>
+            <li><strong>Report immediately</strong> — Critical bugs should be disclosed fast.</li>
+            <li><strong>Don't disclose publicly</strong> — Until the company fixes the bug.</li>
+            <li><strong>Respect rate limits</strong> — Don't hammer APIs or endpoints.</li>
+            <li><strong>Use test accounts</strong> — Never test with real user accounts.</li>
+        </ul>
+
+        <div class="callout info">
+            <strong>💡 Legal Framework:</strong> Bug bounty programs act as <em>authorized penetration testing contracts</em>. As long as you stay in scope and follow the rules, you're legally protected. Step outside, and you're on your own.
+        </div>
+    </section>
+
+    <!-- ===== 15 CONCLUSION ===== -->
+    <section class="section" id="conclusion">
+        <span class="section-number">15 · CONCLUSION</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Final Thoughts
+        </h2>
+        <p>
+            <strong>Bug bounty hunting</strong> is one of the most rewarding careers in cybersecurity. It offers <em>freedom</em>, <em>challenge</em>, and <em>serious money</em> — but it also demands <em>patience</em>, <em>discipline</em>, and <em>continuous learning</em>. There's no shortcut. The hunters at the top of the leaderboards have spent years honing their craft.
+        </p>
+        <p>
+            The good news: the path is clear. Master the fundamentals, build a solid recon pipeline, study disclosed reports, and practice relentlessly. Your first bounty will feel like a milestone — because it is. Everything after that compounds.
+        </p>
+
+        <h3>Your 90-Day Action Plan</h3>
+        <ol>
+            <li><strong>Week 1-2:</strong> Complete PortSwigger Web Security Academy labs.</li>
+            <li><strong>Week 3-4:</strong> Build a recon pipeline with subfinder, httpx, nuclei.</li>
+            <li><strong>Week 5-6:</strong> Pick a VDP program on HackerOne and hunt for 2 weeks.</li>
+            <li><strong>Week 7-8:</strong> Study 20 disclosed reports. Understand why they were valid.</li>
+            <li><strong>Week 9-10:</strong> Focus on one vuln type (IDOR or XSS). Hunt 4 hours/day.</li>
+            <li><strong>Week 11-12:</strong> Submit your first report. Learn from the response.</li>
+        </ol>
+
+        <div class="callout">
+            <strong>🚀 Remember:</strong> Every top hunter was once a beginner. The only difference is they never stopped. Start today, stay consistent, and the bounties will come.
+        </div>
+
+        <p style="text-align:center; margin-top: 30px; font-size: 17px; color: #00ff88; font-weight: 600;">
+            Happy hunting — ethically. 🎯
+        </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <p>© 2025 · <span class="brand">⚡ cyber·sume</span> · Bug Bounty Hunter</p>
+        <p style="margin-top: 8px; font-size: 12px;">Complete Guide · Beginner to Advanced · Updated 2025</p>
+    </footer>
 
 </div>
+
+</body>
+</html>
